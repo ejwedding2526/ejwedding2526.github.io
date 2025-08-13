@@ -1371,7 +1371,7 @@ div.desc {
 .gallery {
   /* (B1) GRID LAYOUT - 3 IMAGES PER ROW */
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   grid-gap: 20px;
  
   /* (B2) OPTIONAL WIDTH RESTRICT */
