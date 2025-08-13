@@ -1338,7 +1338,7 @@ RESPONSIVENESS
   padding: 10px;
  
   /* (C2) COLORS */
-  border: 1px solid #ddd;
+
   background: #fff;
  
   /* (C3) IMAGE RESIZE */
@@ -1353,10 +1353,3 @@ RESPONSIVENESS
   }
 }
 
-/* (E) OPTIONAL ZOOM ON HOVER */
-.gallery img:hover {
-  z-index: 9;
-  transform: scale(1.3);
-  /* linear | ease | ease-in | ease-out | ease-in-out */
-  transition: transform ease 0.5s;
-}
