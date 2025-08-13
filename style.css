@@ -1316,150 +1316,89 @@ RESPONSIVENESS
 }
 
 
-
-
-/* (B) GALLERY WRAPPER */
-.gallery {
-  /* (B1) GRID LAYOUT - 3 IMAGES PER ROW */
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  grid-gap: 20px;
- 
-  /* (B2) OPTIONAL WIDTH RESTRICT */
-  max-width: 1000px;
-  margin: 0 auto;
-  overflow: hidden;
-}
-/* (C) GALLERY IMAGES */
-.gallery img {
-  /* (C1) DIMENSION */
-  width: 100%;
-  height: 180px; /* optional */
-  padding: 10px;
- 
-  /* (C2) COLORS */
-  border: 1px solid #ddd;
-  background: #fff;
- 
-  /* (C3) IMAGE RESIZE */
-  /* cover | contain | fill | scale-down */
-  object-fit: cover;
+* {
+  box-sizing: border-box;
 }
 
-/* (D) ON SMALL SCREENS - 2 IMAGES PER ROW */
-@media only screen and (max-width: 600px) {
-  .gallery {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
 }
 
-
-
-/* Container for the entire slider section including the title and slider itself */
-.background {
-    width: 100%; /* Sets the width to fill the available space */
-    height: 100%; /* Sets the height to fill the available space */
-    position: relative; /* Allows for absolute positioning of child elements */
-    display: flex; /* Enables flexbox layout */
-    flex-direction: column; /* Aligns items in a column (vertical stack) */
-    justify-content: center; /* Centers content vertically */
-    align-items: center; /* Centers content horizontally */
+/* Hide the images by default */
+.mySlides {
+  display: none;
 }
 
-/* Styling for the title above the slider */
-.slider-title {
-    font-size: 4rem; /* Large font size for the title */
-    margin-bottom: 20px; /* Space below the title */
-    font-weight: 600; /* Semi-bold font weight */
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
 }
 
-/* Main container for the slider - this holds the images and navigation buttons */
-.slider-container {
-    position: relative; /* Allows for absolute positioning of navigation buttons */
-    width: 60%; /* Sets the slider width to 60% of the parent container */
-    max-width: 800px; /* Maximum width for larger screens */
-    overflow: hidden; /* Hides the overflow content (only one image is visible at a time) */
-    border-radius: 10px; /* Rounds the corners of the slider */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
-}
-
-/* Flexbox container that holds all the slides */
-.slider {
-    display: flex; /* Enables flexbox layout to line up slides horizontally */
-    transition: transform 0.4s ease-in-out; /* Smooth transition when sliding between images */
-}
-
-/* Each individual slide - takes up full width of the container */
-.slide {
-    min-width: 100%; /* Each slide takes up 100% of the slider container's width */
-    height: 450px; /* Fixed height for each slide */
-    transition: transform 0.5s ease-in-out; /* Smooth transition when slides are changed */
-}
-
-/* Ensures that images fill the slide area while maintaining aspect ratio */
-.slide img {
-    width: 100%; /* Image width matches the slide width */
-    height: 100%; /* Image height matches the slide height */
-    object-fit: cover; /* Images are scaled to cover the entire slide, cropping if necessary */
-    border-radius: 10px; /* Rounds the corners of the images to match the slider */
-}
-
-/* Common styling for both previous and next navigation buttons */
-.prev, .next {
-    position: absolute; /* Absolute positioning within the slider container */
-    top: 50%; /* Centers the button vertically */
-    transform: translateY(-50%); /* Offsets the button position by half its height */
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-    color: white; /* White color for the arrow icons */
-    border: none; /* Removes default button borders */
-    width: 40px; /* Fixed width for the buttons */
-    height: 40px; /* Fixed height for the buttons */
-    cursor: pointer; /* Changes the cursor to pointer on hover */
-    z-index: 10; /* Ensures buttons appear above the slider content */
-    border-radius: 50%; /* Makes the buttons round */
-    transition: background-color 0.3s ease; /* Smooth transition for background color on hover */
-    display: flex; /* Enables flexbox for centering the arrow inside the button */
-    justify-content: center; /* Centers arrow horizontally */
-    align-items: center; /* Centers arrow vertically */
-    padding: 0; /* Removes any default padding */
-}
-
-/* Positioning the previous button to the left */
-.prev {
-    left: 10px; /* Positions the button 10px from the left edge */
-}
-
-/* Positioning the next button to the right */
+/* Next & previous buttons */
+.prev,
 .next {
-    right: 10px; /* Positions the button 10px from the right edge */
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
-/* Hover effect for navigation buttons */
-.prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8); /* Darkens the button background on hover */
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
 }
 
-/* Container for the dot indicators below the slider */
-.dots-container {
-    margin-top: 20px; /* Space above the dots */
-    display: flex; /* Enables flexbox layout for horizontal alignment */
-    justify-content: center; /* Centers the dots horizontally */
-    align-items: center; /* Centers the dots vertically */
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Common styling for each individual dot */
-.dot {
-    height: 15px; /* Fixed height for the dots */
-    width: 15px; /* Fixed width for the dots */
-    margin: 0 5px; /* Spacing between the dots */
-    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
-    border-radius: 50%; /* Makes the dots round */
-    display: inline-block; /* Ensures dots are inline */
-    cursor: pointer; /* Changes cursor to pointer on hover */
-    transition: background-color 0.3s ease; /* Smooth transition for background color on hover */
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
 }
 
-/* Styling for the active dot - indicates the current slide */
-.dot.active {
-    background-color: rgba(255, 255, 255, 1); /* Solid white background for the active dot */
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
 }
