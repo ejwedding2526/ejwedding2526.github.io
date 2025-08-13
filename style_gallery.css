@@ -1,22 +1,56 @@
 :root {
-  --carousel-height: 800px;
-  --carousel-radius: 0.5em;
+  --carousel-height: 700px;
   --carousel-nav-btn-dim: 3em;
   --carousel-page-nav-btn-dim: 0.5em;
-  --carousel-caption-padding: 2em;
-  --carousel-caption-color: #fff;
-  --carousel-caption-bg: linear-gradient(
-    to bottom,
-    transparent,
-    hsl(0 0 0 / 65%) 80%
+
   );
   --carousel-inner-spacing: 2em;
-  --carousel-prev-next-btn-bg: #fff;
-  --carousel-prev-next-btn-color: #333;
+  --carousel-prev-next-btn-bg: #B1BF93;
+  --carousel-prev-next-btn-color: #5B7343;
   --carousel-pagination-margin: 1em;
   --carousel-pagination-gap: 0.75em;
-  --carousel-pagination-btn-bg: #aaa;
-  --carousel-pagination-btn-active-bg: #333;
+  --carousel-pagination-btn-bg: #B1BF93;
+  --carousel-pagination-btn-active-bg: #5B7343;
+}
+
+@font-face {
+    font-family: 'Amalfi-Coast';
+    src: url('assets/fonts/Amalfi-Coast.ttf.woff') format('woff'),
+        url('assets/fonts/Amalfi-Coast.ttf.svg#Amalfi-Coast') format('svg'),
+        url('assets/fonts/Amalfi-Coast.ttf.eot'),
+        url('assets/fonts/Amalfi-Coast.ttf.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Basic font settings  */
+h1,
+h2,
+h3,
+p {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--text);
+    font-weight: 400;
+}
+
+h1 a,
+h1 a:visited {
+    color: var(--text);
+    display: inline-block;
+    transition:all 0.75s ease-in-out;
+}
+h1 a:hover {
+    color: var(--red);
+}
+
+
+/* Makes sure everything is centered. Always. */
+section,
+div {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
 }
 
 /* Box-sizing reset */
@@ -29,6 +63,7 @@
 body {
   margin: 0;
   font: 1em/160% sans-serif;
+
 }
 
 img,
