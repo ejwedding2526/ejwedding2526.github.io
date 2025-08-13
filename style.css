@@ -1323,7 +1323,7 @@ RESPONSIVENESS
   /* (B1) GRID LAYOUT - 3 IMAGES PER ROW */
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  grid-gap: 10px;
+  grid-gap: 20px;
  
   /* (B2) OPTIONAL WIDTH RESTRICT */
   max-width: 1000px;
@@ -1338,7 +1338,7 @@ RESPONSIVENESS
   padding: 10px;
  
   /* (C2) COLORS */
-
+  border: 1px solid #ddd;
   background: #fff;
  
   /* (C3) IMAGE RESIZE */
