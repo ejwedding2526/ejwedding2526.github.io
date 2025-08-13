@@ -1,3 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.gallery {
+  border: 0px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 0px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
 :root {
     --green: #5B7343;
     --light-green: #B1BF93;
@@ -1315,51 +1367,48 @@ RESPONSIVENESS
     }
 }
 
+h1 {text-align: center;}
+p {text-align: center;}
+div {text-align: center;}
+</style>
+</head>
+<body>
 
-div.gallery {
-  border: 0px solid #ccc;
-}
+<p class="bigtext"> April 25, 2022</p>
+<div style="padding:6px;"></div>
 
-div.gallery:hover {
-  border: 0px solid #777;
-}
+<p class="subtext">Jacob & Emily's First Trip to Saguaro National Park</p>
 
-div.gallery img {
-  width: 100%;
-  height: auto;
-}
+<div style="padding:10px;"></div>
 
-div.desc {
-  padding: 15px;
-  text-align: center;
-}
+<div class="responsive">
+  <div class="gallery">
+      <img src="assets/IMG_1289.jpeg">
+  </div>
+</div>
 
-* {
-  box-sizing: border-box;
-}
 
-.responsive {
-  padding: 0 6px;
-  float: left;
-  width: 24.99999%;
-}
+<div class="responsive">
+  <div class="gallery">
+      <img src="assets/IMG_4871.jpeg">
+  </div>
+</div>
 
-@media only screen and (max-width: 700px) {
-  .responsive {
-    width: 49.99999%;
-    margin: 6px 0;
-  }
-}
+<div class="responsive">
+  <div class="gallery">
+      <img src="assets/IMG_1257.jpeg">
+  </div>
+</div>
 
-@media only screen and (max-width: 500px) {
-  .responsive {
-    width: 100%;
-  }
-}
+<div class="responsive">
+  <div class="gallery">
+      <img src="assets/IMG_1371.jpeg">
+  </div>
+</div>
 
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+<div class="clearfix"></div>
 
+
+
+</body>
+</html>
