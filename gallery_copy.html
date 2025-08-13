@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Carousel</title>
+    <link rel="stylesheet" href="style_gallery.css" />
+    <style>
+      .site-container {
+        max-width: 800px;
+        margin: 3em auto;
+        padding: 2em;
+      }
+
+      .demo-title {
+        text-align: center;
+        margin-bottom: 2em;
+      }
+
+      .carousel + .carousel {
+        margin-top: 4em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="site-container">
+      <div
+        id="carousel-1"
+        class="carousel"
+        role="region"
+        aria-labelledby="carousel-1-title"
+      >
+        <h2 class="carousel-title" id="carousel-1-title">
+         April 25th, 2024
+        </h2>
+        <p class="carousel-description">
+          Jacob and Emily's first trip to Saguaro National Park!
+        </p>
+        <div
+          class="slide"
+          role="tabpanel"
+          aria-labelledby="carousel-1-slide-1-title"
+        >
+          <div class="slide-content">
+            <div class="slide-caption">
+            </div>
+
+            <img 
+              src="assets/IMG_1182.jpeg"
+            />
+          </div>
+        </div>
+
+        <div
+          class="slide"
+          role="tabpanel"
+          aria-labelledby="carousel-1-slide-2-title"
+        >
+          <div class="slide-content">
+            <div class="slide-caption">
+            </div>
+            <img
+              src="assets/IMG_1257.jpeg"
+   
+            />
+          </div>
+        </div>
+
+        <div
+          class="slide"
+          role="tabpanel"
+          aria-labelledby="carousel-1-slide-3-title"
+        >
+          <div class="slide-content">
+            <img
+              src="assets/IMG_1289.jpeg"
+
+            />
+          </div>
+        </div>
+        <div
+          class="slide"
+          role="tabpanel"
+          aria-labelledby="carousel-1-slide-4-title"
+        >
+          <div class="slide-content">
+            <div class="slide-caption">
+            </div>
+
+            <img
+              src="assets/IMG_1313.jpeg"
+     
+            />
+          </div>
+        </div>
+
+<div
+          class="slide"
+          role="tabpanel"
+          aria-labelledby="carousel-1-slide-1-title"
+        >
+          <div class="slide-content">
+            <div class="slide-caption">
+            </div>
+
+            <img
+              src="assets/IMG_1327.jpeg"
+            />
+          </div>
+        </div>
+
+<div
+          class="slide"
+          role="tabpanel"
+          aria-labelledby="carousel-1-slide-1-title"
+        >
+          <div class="slide-content">
+            <div class="slide-caption">
+            </div>
+
+            <img
+              src="assets/IMG_1349.jpeg"
+            />
+          </div>
+        </div>
+
+
+<div
+          class="slide"
+          role="tabpanel"
+          aria-labelledby="carousel-1-slide-1-title"
+        >
+          <div class="slide-content">
+            <div class="slide-caption">
+            </div>
+
+            <img
+              src="assets/IMG_1354.jpeg"
+            />
+          </div>
+        </div>
+
+
+<div
+          class="slide"
+          role="tabpanel"
+          aria-labelledby="carousel-1-slide-1-title"
+        >
+          <div class="slide-content">
+            <div class="slide-caption">
+            </div>
+
+            <img
+              src="assets/IMG_1371.jpeg"
+            />
+          </div>
+        </div>
+
+<div
+          class="slide"
+          role="tabpanel"
+          aria-labelledby="carousel-1-slide-1-title"
+        >
+          <div class="slide-content">
+            <div class="slide-caption">
+            </div>
+
+            <img
+              src="assets/IMG_1410.jpeg"
+            />
+          </div>
+        </div>
+
+
+<div
+          class="slide"
+          role="tabpanel"
+          aria-labelledby="carousel-1-slide-1-title"
+        >
+          <div class="slide-content">
+            <div class="slide-caption">
+            </div>
+
+            <img
+              src="assets/IMG_1462.jpeg"
+            />
+          </div>
+        </div>
+
+
+<div
+          class="slide"
+          role="tabpanel"
+          aria-labelledby="carousel-1-slide-1-title"
+        >
+          <div class="slide-content">
+            <div class="slide-caption">
+            </div>
+
+            <img
+              src="assets/IMG_1478.jpeg"
+            />
+          </div>
+        </div>
+
+<div
+          class="slide"
+          role="tabpanel"
+          aria-labelledby="carousel-1-slide-1-title"
+        >
+          <div class="slide-content">
+            <div class="slide-caption">
+            </div>
+
+            <img
+              src="assets/IMG_4871.jpeg"
+            />
+          </div>
+        </div>
+
+
+
+
+      </div>
+
+
+
+
+     
+    <script src="carousel.js"></script>
+    <script>
+      const carousel1 = JSCarousel({
+        carouselSelector: "#carousel-1",
+        slideSelector: ".slide",
+        enablePagination: true,
+      });
+
+      carousel1.create();
+
+      const carousel2 = JSCarousel({
+        carouselSelector: "#carousel-2",
+        slideSelector: ".slide",
+        enablePagination: false,
+        enableAutoplay: false,
+      });
+
+      carousel2.create();
+
+      const carousel3 = JSCarousel({
+        carouselSelector: "#carousel-3",
+        slideSelector: ".slide",
+      });
+
+      carousel3.create();
+
+      window.addEventListener("unload", () => {
+        carousel1.destroy();
+        carousel2.destroy();
+      });
+    </script>
+  </body>
+</html>
